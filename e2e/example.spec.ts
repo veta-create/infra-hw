@@ -13,7 +13,7 @@ test("если добавить элемент, он появляется в с�
   await page.getByTestId("button-add").click();
 
   const items = page.getByTestId("list-item");
-  const allTexts = await items.allTextContents();
+  const allTexts = await items.allTextContents()-;
 
   await expect(allTexts).toContain("Сделать домашку");
 });
