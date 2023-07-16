@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/shri-unit-demo-cra/static/css/main.bca2b5ee.css",
+    "main.js": "/shri-unit-demo-cra/static/js/main.7fd664e5.js",
+    "index.html": "/shri-unit-demo-cra/index.html",
+    "main.bca2b5ee.css.map": "/shri-unit-demo-cra/static/css/main.bca2b5ee.css.map",
+    "main.7fd664e5.js.map": "/shri-unit-demo-cra/static/js/main.7fd664e5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bca2b5ee.css",
+    "static/js/main.7fd664e5.js"
+  ]
+}
