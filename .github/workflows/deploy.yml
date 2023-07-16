@@ -3,14 +3,14 @@ name: Деплой на github pages
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   deploy_and_build:
     runs-on: ubuntu-latest
     steps:
       - name: Чекаут
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
           node-version: 18
