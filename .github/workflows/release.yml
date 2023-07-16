@@ -73,7 +73,7 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             const [owner, repo] = '${{ github.repository }}'.split('/');
-            const base = 'master';
+            const base = 'main';
             const head = 'release-${{ github.ref_name }}';
             const issue_number = ${{ needs.issue.outputs.issue_number }};
             const prBody = 'This is a pull request for release. Closes #' + issue_number;
@@ -109,7 +109,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-      - name: Run tests
+      - name: Run e2e
         uses: ./.github/actions/e2e
   code-lint:
     runs-on: ubuntu-latest
@@ -120,5 +120,5 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-      - name: Run tests
+      - name: Run lint
         uses: ./.github/actions/lint
