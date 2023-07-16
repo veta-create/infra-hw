@@ -3,7 +3,7 @@ name: Деплой на github pages
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   deploy_and_build:
