@@ -1,0 +1,15 @@
+name: 'unit'
+description: 'Прогон юнит тестов'
+inputs:
+  node-version:
+    required: true
+    default: '18'
+runs:
+  using: "composite"
+  steps:
+    - name: Установка зависимостей
+      run: npm ci
+      shell: bash
+    - name: Прогон тестов
+      run: npm run test-ci
+      shell: bash
