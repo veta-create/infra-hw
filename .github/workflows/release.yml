@@ -64,6 +64,9 @@ jobs:
       - name: Git checkout
         run: |
           git checkout -b release-${{ github.ref_name }}
+          touch file.txt >> content
+          git add .
+          git commit -m"content"
       - name: Push the branch
         run: git push origin release-${{ github.ref_name }}
       - name: Create or Update Pull Request
@@ -73,7 +76,7 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             const [owner, repo] = '${{ github.repository }}'.split('/');
-            const base = 'master';
+            const base = 'main';
             const head = 'release-${{ github.ref_name }}';
             const issue_number = ${{ needs.issue.outputs.issue_number }};
             const prBody = 'This is a pull request for release. Closes #' + issue_number;
